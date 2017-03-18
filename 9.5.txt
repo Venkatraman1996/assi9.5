@@ -1,0 +1,39 @@
+1.
+The core components of flume are source,channels and sink
+
+*the source receives event from external sources,it stores event in one or multiple
+channels
+*the channel temporarily stores and keeps the event until it is consumed by the flume
+sink. it acts as flume repository.the two types of channels are file channel and memory channel
+*the sink removes the event from channel and put into an external repository like HDFS
+or move to next flume agent.
+==========================================================================================================================
+
+2. Can flume provide 100% reliability while transfering the data.
+
+
+yes,the data or event flow through the channel is encripted and encapsulated which achieved 100 % end to end reliablity
+
+===========================================================================================================================
+
+3. Explain the consolidation in flume.
+
+*It collect data from different sources even from different flume agents.
+*flume source can collect all data flow from different sources and flows through channel 
+and sink and send this data to HDFS or target destination
+
+=======================================================================================================================
+
+4. Explain what is an event in flume
+
+*A unit of data with set of string attributes called flume event
+*The external source like web-server sends events to the source.
+*flume has internal built in functions to understand source format.
+
+=================================================================================================================
+
+5. Explain what is an agent in flume.
+
+*A flume agent is a JVM process that holds the flume core components(source,channel,sink)
+through which event flows from an external source like web-servers to destination like HDFS
+*agent is heart of apache flume.
